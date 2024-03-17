@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -19,13 +20,21 @@ public class Avaliacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     @Column
+    @ManyToOne
     private Usuario usuario;
-    // add estabelecimento
+    
+    @Column
+    @ManyToOne
+    private Estabelecimento estabelecimento;
+    
     @Column
     private Double mediaGera;
+    
     @Column
     private String descricao;
+    
     @Column
     private Timestamp momento;
 
@@ -76,6 +85,12 @@ public class Avaliacao {
     public void setMomento(Timestamp momento) {
         this.momento = momento;
     }
-    
-    
+
+    public Estabelecimento getEstabelecimento() {
+        return estabelecimento;
+    }
+
+    public void setEstabelecimento(Estabelecimento estabelecimento) {
+        this.estabelecimento = estabelecimento;
+    }
 }
