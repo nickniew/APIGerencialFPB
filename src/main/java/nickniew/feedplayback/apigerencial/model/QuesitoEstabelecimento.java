@@ -15,7 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "regQuesitosEstabelecimento")
-public class QuesitosEstabelecimento {
+public class QuesitoEstabelecimento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +32,7 @@ public class QuesitosEstabelecimento {
     @Column
     private boolean ativo;
 
-    public QuesitosEstabelecimento(Long id, Quesito quesito, Estabelecimento estabelecimento, boolean ativo) {
+    public QuesitoEstabelecimento(Long id, Quesito quesito, Estabelecimento estabelecimento, boolean ativo) {
         this.id = id;
         this.quesito = quesito;
         this.estabelecimento = estabelecimento;

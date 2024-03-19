@@ -8,7 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  * @author Nickniew
  */
-@org.springframework.stereotype.Service
 public class UsuarioService extends Service<Usuario, Long> {
 
     private final UsuarioRepository usuarioRepository;

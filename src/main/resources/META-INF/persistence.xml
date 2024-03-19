@@ -21,7 +21,22 @@
             <!-- Configurações de conexão -->
             <property name="hibernate.connection.pool_size" value="10"/>
             <property name="hibernate.connection.autocommit" value="false"/>
-            <property name="hibernate.connection.release_mode" value="auto"/>           
+            <property name="hibernate.connection.release_mode" value="auto"/>    
+            
+            <!-- Provedor JPA -->
+            <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+            <!-- Entidades -->
+            <class>nickniew.feedplayback.apigerencial.model.Usuario</class>    
+            <class>nickniew.feedplayback.apigerencial.model.Beneficio</class> 
+            <class>nickniew.feedplayback.apigerencial.model.Cupom</class> 
+            <class>nickniew.feedplayback.apigerencial.model.Avaliacao</class> 
+            <class>nickniew.feedplayback.apigerencial.model.Estabelecimento</class> 
+            <class>nickniew.feedplayback.apigerencial.model.ImagemEstabelecimento</class> 
+            <class>nickniew.feedplayback.apigerencial.model.Quesito</class> 
+            <class>nickniew.feedplayback.apigerencial.model.QuesitoAvaliado</class> 
+            <class>nickniew.feedplayback.apigerencial.model.QuesitosEstabelecimento</class> 
+            <class>nickniew.feedplayback.apigerencial.model.UsuarioEmpreendedor</class>    
         </properties>
     </persistence-unit>
 </persistence>

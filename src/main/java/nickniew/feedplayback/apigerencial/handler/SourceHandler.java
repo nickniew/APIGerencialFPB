@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * @author Nickniew
  */
 @RestControllerAdvice
-public class UsuarioHandler {
+public class SourceHandler {
     
         @ExceptionHandler(ObjectNotFoundException.class)
-    public ResponseEntity<String> handleUsuarioNotFoundException(ObjectNotFoundException e) {
+    public ResponseEntity<String> handleSourceNotFoundException(ObjectNotFoundException e) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                              .body("Usuário não encontrado: " + e.getMessage());
     }
 
     @ExceptionHandler(ObjectInvalidException.class)
-    public ResponseEntity<String> handleUsuarioInvalidoException(ObjectInvalidException e) {
+    public ResponseEntity<String> handleSourceInvalidException(ObjectInvalidException e) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                              .body("Usuário inválido: " + e.getMessage());
     }
