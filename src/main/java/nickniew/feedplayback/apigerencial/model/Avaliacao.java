@@ -1,13 +1,14 @@
 package nickniew.feedplayback.apigerencial.model;
 
 import java.security.Timestamp;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 /**
  *
@@ -21,12 +22,12 @@ public class Avaliacao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column
     @ManyToOne
+    @JoinColumn(name = "usuarioId")
     private Usuario usuario;
     
-    @Column
     @ManyToOne
+    @JoinColumn(name = "estabelecimentoId")
     private Estabelecimento estabelecimento;
     
     @Column
