@@ -1,7 +1,6 @@
 package nickniew.feedplayback.apigerencial.model;
 
 import java.util.List;
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,7 +8,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 /**
@@ -31,18 +29,10 @@ public class Estabelecimento {
     @Column
     private String descricao;
 
-    @OneToMany(mappedBy = "estabelecimento", cascade = CascadeType.ALL)
-    private List<ImagemEstabelecimento> imagens;
-    
-    @OneToMany
-    private List<Quesito> quesitos;
-
     public Estabelecimento(Long id, UsuarioEmpreendedor proprietario, String descricao, List<ImagemEstabelecimento> imagens, List<Quesito> quesitos) {
         this.id = id;
         this.proprietario = proprietario;
         this.descricao = descricao;
-        this.imagens = imagens;
-        this.quesitos = quesitos;
     }
 
     public Long getId() {
@@ -67,22 +57,6 @@ public class Estabelecimento {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public List<ImagemEstabelecimento> getImagens() {
-        return imagens;
-    }
-
-    public void setImagens(List<ImagemEstabelecimento> imagens) {
-        this.imagens = imagens;
-    }
-
-    public List<Quesito> getQuesitos() {
-        return quesitos;
-    }
-
-    public void setQuesitos(List<Quesito> quesitos) {
-        this.quesitos = quesitos;
     }
 
 }

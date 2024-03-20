@@ -2,7 +2,7 @@ package nickniew.feedplayback.apigerencial.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import nickniew.feedplayback.apigerencial.model.Beneficio;
-import nickniew.feedplayback.apigerencial.service.Service;
+import nickniew.feedplayback.apigerencial.service.BeneficioService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/beneficio")
 public class BeneficioController extends Controller<Beneficio, Long> {
 
-    public BeneficioController(Service<Beneficio, Long> repository) {
-        super(repository);
+    public BeneficioController(BeneficioService beneficioService) {
+        super(beneficioService);
     }
 
     @Override
