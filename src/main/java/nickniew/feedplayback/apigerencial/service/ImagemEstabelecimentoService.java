@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  * @author Nickniew
  */
+@org.springframework.stereotype.Service
 public class ImagemEstabelecimentoService extends Service<ImagemEstabelecimento, Long> {
 
     private final ImagemEstabelecimentoRepository imagemEstabelecimentoRepository;

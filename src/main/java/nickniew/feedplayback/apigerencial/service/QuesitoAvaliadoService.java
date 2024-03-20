@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  * @author Nickniew
  */
+@org.springframework.stereotype.Service
 public class QuesitoAvaliadoService extends Service<QuesitoAvaliado, Long> {
 
     private final QuesitoAvaliadoRepository quesitoAvaliadoRepository;
