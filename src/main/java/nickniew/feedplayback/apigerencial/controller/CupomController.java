@@ -2,7 +2,7 @@ package nickniew.feedplayback.apigerencial.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import nickniew.feedplayback.apigerencial.model.Cupom;
-import nickniew.feedplayback.apigerencial.service.Service;
+import nickniew.feedplayback.apigerencial.service.CupomService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/cupom")
 public class CupomController extends Controller<Cupom, Long> {
 
-    public CupomController(Service<Cupom, Long> repository) {
-        super(repository);
+    public CupomController(CupomService cupomService) {
+        super(cupomService);
     }
 
     @Override

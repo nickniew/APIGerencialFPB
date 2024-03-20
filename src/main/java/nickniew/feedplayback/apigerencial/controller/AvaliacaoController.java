@@ -2,7 +2,7 @@ package nickniew.feedplayback.apigerencial.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import nickniew.feedplayback.apigerencial.model.Avaliacao;
-import nickniew.feedplayback.apigerencial.service.Service;
+import nickniew.feedplayback.apigerencial.service.AvaliacaoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,17 +21,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/avaliacao")
 public class AvaliacaoController extends Controller<Avaliacao, Long> {
 
-    public AvaliacaoController(Service<Avaliacao, Long> repository) {
-        super(repository);
+    public AvaliacaoController(AvaliacaoService avaliacaoService) {
+        super(avaliacaoService);
     }
-    
-        @Override
+
+    @Override
     @Operation(summary = "Cria nova avaliacao")
     @PostMapping("/create")
     public ResponseEntity<Avaliacao> create(@RequestBody Avaliacao entity) {
         return super.create(entity);
     }
-    
+
     @Override
     @Operation(summary = "Atualiza avaliacao existente")
     @PutMapping("/update/{id}")

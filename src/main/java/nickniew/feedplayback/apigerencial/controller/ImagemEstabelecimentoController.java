@@ -2,7 +2,7 @@ package nickniew.feedplayback.apigerencial.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import nickniew.feedplayback.apigerencial.model.ImagemEstabelecimento;
-import nickniew.feedplayback.apigerencial.service.Service;
+import nickniew.feedplayback.apigerencial.service.ImagemEstabelecimentoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/imagemEstabelecimento")
 public class ImagemEstabelecimentoController extends Controller<ImagemEstabelecimento, Long> {
 
-    public ImagemEstabelecimentoController(Service<ImagemEstabelecimento, Long> repository) {
-        super(repository);
+    public ImagemEstabelecimentoController(ImagemEstabelecimentoService imagemEstabelecimentoService) {
+        super(imagemEstabelecimentoService);
     }
 
     @Override

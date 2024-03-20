@@ -2,7 +2,7 @@ package nickniew.feedplayback.apigerencial.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import nickniew.feedplayback.apigerencial.model.QuesitoEstabelecimento;
-import nickniew.feedplayback.apigerencial.service.Service;
+import nickniew.feedplayback.apigerencial.service.QuesitoEstabelecimentoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class QuesitoEstabelecimentoController extends Controller<QuesitoEstabelecimento, Long> {
 
-    public QuesitoEstabelecimentoController(Service<QuesitoEstabelecimento, Long> repository) {
-        super(repository);
+    public QuesitoEstabelecimentoController(QuesitoEstabelecimentoService quesitoEstabelecimentoService) {
+        super(quesitoEstabelecimentoService);
     }
     
     @Override
