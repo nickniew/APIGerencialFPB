@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gerência de Estabelecimento</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+<body>
+    <h1>Gerência de Estabelecimento</h1>
+    <div class="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#avaliacao" class="link">Avaliação</a></li>
+            <!-- Adicione mais opções de menu conforme necessário -->
+        </ul>
+    </div>
+    <div class="content">
+        <h2 id="estabelecimento">Estabelecimento</h2>
+        <p>Gerência de Estabelecimentos.</p>
+        <ul>
+            <li><a th:href="@{/estabelecimento/listar}" class="link animated fadeIn">Listar Estabelecimentos</a></li>
+            <li><a th:href="@{/estabelecimento/adicionar}" class="link animated fadeIn">Adicionar Estabelecimento</a></li>
+            <li><a th:href="@{/estabelecimento/editar/1}" class="link animated fadeIn">Editar Estabelecimento</a></li>
+            <li><a th:href="@{/estabelecimento/remover/1}" class="link animated fadeIn">Remover Estabelecimento</a></li>
+        </ul>
+    </div>
+</body>
+</html>

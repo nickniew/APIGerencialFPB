@@ -1,5 +1,6 @@
 package nickniew.feedplayback.apigerencial.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
@@ -11,6 +12,7 @@ import jakarta.persistence.Table;
 @Table(name = "regUsuarioEmpreendedor")
 public class UsuarioEmpreendedor extends Usuario {
     
+    @Column
     private String cnpj;
     
     public UsuarioEmpreendedor(Long id, String email, String login, String senha, String nome, boolean ativo) {

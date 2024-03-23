@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gerência de Cupom</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+<body>
+    <h1>Gerência de Cupom</h1>
+    <div class="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#avaliacao" class="link">Avaliação</a></li>
+            <!-- Adicione mais opções de menu conforme necessário -->
+        </ul>
+    </div>
+    <div class="content">
+        <h2 id="cupom">Cupom</h2>
+        <p>Gerência de Cupons.</p>
+        <ul>
+            <li><a th:href="@{/cupom/listar}" class="link animated fadeIn">Listar Cupons</a></li>
+            <li><a th:href="@{/cupom/adicionar}" class="link animated fadeIn">Adicionar Cupom</a></li>
+            <li><a th:href="@{/cupom/editar/1}" class="link animated fadeIn">Editar Cupom</a></li>
+            <li><a th:href="@{/cupom/remover/1}" class="link animated fadeIn">Remover Cupom</a></li>
+        </ul>
+    </div>
+</body>
+</html>
